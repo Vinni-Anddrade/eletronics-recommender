@@ -1,2 +1,5 @@
 LLM_MODEL_NAME: "meta-llama/llama-4-scout-17b-16e-instruct"
 EMBEDDING_MODEL_NAME: "all-MiniLM-L6-v2"
+PROJECT_ID: "llm-model-480420"
+VECTOR_COLLECTION: "eletronics-description"
+DATA_PATH: "../data/flipkart_product_review.csv"
