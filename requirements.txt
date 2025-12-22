@@ -8,3 +8,4 @@ langchain-text-splitters
 python-box
 google-cloud-firestore
 langchain-google-firestore
+flask

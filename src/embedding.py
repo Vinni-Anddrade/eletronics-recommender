@@ -47,8 +47,4 @@ class EmbeddingModel:
 if __name__ == "__main__":
     # Embedding documents into Firestore GCP pipeline (execute it exclusively to write the vectors into firestore)
     embedding_object = EmbeddingModel()
-    # embedding_object.embedding_documents()
-
-    query = "Best cellphone to buy"
-    result_query = embedding_object.similarity_search_execution(query)
-    print(result_query)
+    embedding_object.embedding_documents()
