@@ -1,8 +1,14 @@
+from dotenv import load_dotenv
+
+from google.cloud import firestore
 from langchain_huggingface.embeddings import HuggingFaceEmbeddings
 from langchain_google_firestore import FirestoreVectorStore
-from configuration import Config
-from data_reader import DataManipulation
-from google.cloud import firestore
+
+from src.configuration import Config
+from src.data_reader import DataManipulation
+
+
+load_dotenv()
 
 
 class EmbeddingModel:

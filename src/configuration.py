@@ -1,9 +1,9 @@
-from utils.tools import read_yaml
+from src.utils.tools import read_yaml
 
 
 class Config:
     def __init__(self):
-        CONFIG_PATH = "../src/config/config.yaml"
+        CONFIG_PATH = "./src/config/config.yaml"
         config = read_yaml(CONFIG_PATH)
 
         self.LLM_MODEL_NAME = config["LLM_MODEL_NAME"]

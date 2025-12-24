@@ -1,8 +1,12 @@
 import streamlit as st
 from langchain_core.messages import AIMessage, HumanMessage
 
+from src.llm.rag_process import RagProcessing
+
 
 st.set_page_config(layout="wide", page_title="Eletronics Recommender")
+
+model = RagProcessing()
 
 
 st.title("Eletronics Recommender")
@@ -26,11 +30,9 @@ if input_prompt:
     with st.chat_message("user"):
         st.markdown(input_prompt)
 
-    model = ""
+    model_response = model.rag_chain(input_prompt)
 
-    response = "Olá"
-
-    st.session_state["messages"].append(AIMessage(content=response))
+    st.session_state["messages"].append(AIMessage(content=model_response))
 
     with st.chat_message("ai"):
-        st.markdown(response)
+        st.markdown(model_response)
